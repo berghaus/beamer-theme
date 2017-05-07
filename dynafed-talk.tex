@@ -68,6 +68,18 @@
 
 \end{frame}
 
+\begin{frame}
+  \frametitle{Challenges: Behaviour on Mkdir}
+  \begin{block}{WebDAV RFC 8.7.2 PUT for Collections}
+    When the PUT operation creates a new non-collection resource all ancestors MUST already exist. If all ancestors do not exist, the method MUST fail with a 409 (Conflict) status code. For example, if resource /a/b/c/d.html is to be created and /a/b/c/ does not exist, then the request must fail.
+  \end{block}
+  \begin{itemize}
+    \item<1- > Default Rucio HTTP(S) behaviour: make all parent directory before putting file
+    \item<2- > In object stores directories/collections do not exist
+    \item<2- > Cannot implement sensible mkdir/mkcol in federation
+  \end{itemize}
+\end{frame}
+
 
 
 \end{document}
