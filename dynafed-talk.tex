@@ -48,4 +48,26 @@
   With lots of help from ADC and DDM!
 \end{frame}
 
+\begin{frame}
+  \frametitle{Status of DynaFed at CERN}
+  \begin{itemize}
+    \item Setup:
+    \begin{itemize}
+      \item DynaFed running on CC7 on CERN OpenStack
+      \item Linked to CephS3 at CERN
+    \end{itemize}
+		\item Authentication:
+    \begin{itemize}
+      \item Using X.509 with VOMS extensions
+      \item Read/Write/List access for ATLAS, added delete access for DDM team
+      \item Federation forwards signed URLs to authenticated users (signatures last 1h)
+    \end{itemize}
+		\item Panda Queue (CERN-EXTENSION\_MCORE) writing Job Output to federation
+		\item Defined Storage Element in ATLAS DDM (Rucio) : CERN-EXTENSION\_SCRATCHDISK
+  \end{itemize}
+
+\end{frame}
+
+
+
 \end{document}
