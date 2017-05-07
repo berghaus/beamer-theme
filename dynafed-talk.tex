@@ -20,25 +20,23 @@
 
 
 \begin{frame}
-\frametitle{There Is No Largest Prime Number}
-\framesubtitle{The proof uses \textit{reductio ad absurdum}.}
-\begin{theorem}
-There is no largest prime number. \end{theorem}
-\begin{enumerate}
-\item<1-| alert@1> Suppose $p$ were the largest prime number.
-\item<2-> Let $q$ be the product of the first $p$ numbers.
-\item<3-> Then $q+1$ is not divisible by any of them.
-\item<1-> But $q + 1$ is greater than $1$, thus divisible by some prime
-number not in the first $p$ numbers.
-\end{enumerate}
+\frametitle{Review: What does DynaFed do?}
+\begin{itemize}
+\item Aggregates storage and metadata farms on-the-fly
+\item Exposes standard protocols that support redirections and WAN data access
+\item Creates (the illusion of) a unique namespace from a set of distinct storage or metadata endpoints
+\item read and write support
+\end{itemize}
 \end{frame}
 
 \begin{frame}
-\frametitle{There Is No Largest Prime Number}
-\framesubtitle{The proof uses \textit{reductio ad absurdum}.}
-\begin{block}{Observation 1}
-Simmons Hall is composed of metal and concrete.
-\end{block}
+  \frametitle{Dynafed Namespace}
+  \begin{figure}
+      \centering
+      \includegraphics[width=\columnwidth]{dynafed-namespaces.png}
+  \end{figure}
 \end{frame}
+
+
 
 \end{document}
