@@ -45,7 +45,7 @@
     \item At RAL: Alastair Dewhurst
     \item In Italy: Alessandro De Salvo
   \end{itemize}
-  With lots of help from ADC and DDM!
+  With lots of help from ADC (Ale and Ivan) and DDM (Mario and Cedric)!
 \end{frame}
 
 \begin{frame}
@@ -69,17 +69,28 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Challenges: Behaviour on Mkdir}
+  \frametitle{Problem: Directories/Collections}
   \begin{block}{WebDAV RFC 8.7.2 PUT for Collections}
     When the PUT operation creates a new non-collection resource all ancestors MUST already exist. If all ancestors do not exist, the method MUST fail with a 409 (Conflict) status code. For example, if resource /a/b/c/d.html is to be created and /a/b/c/ does not exist, then the request must fail.
   \end{block}
   \begin{itemize}
     \item<1- > Default Rucio HTTP(S) behaviour: make all parent directory before putting file
     \item<2- > In object stores directories/collections do not exist
-    \item<2- > Cannot implement sensible mkdir/mkcol in federation
+    \item<2- > MKCOL not implemented in federation
   \end{itemize}
 \end{frame}
 
-
+\begin{frame}
+  \frametitle{Solution: Directories/Collections}
+  \begin{itemize}
+    \item Rucio: Resolve DynaFed and WebDAV standard behaviour:
+    \begin{itemize}
+      \item Flag HTTP resources that do not implement full WebDAV standard
+      \item Until flag supported in Rucio and AGIS relying on hack in Rucio
+    \end{itemize}
+    \item DynaFed: Create union of WebDAV standard and object store behaviour in DynaFed: \href{https://its.cern.ch/jira/browse/LCGDM-2373}{LCGDM-2373}
+    \item \emph{Note}: Avoid combining writable WebDAV and object stores in a DynaFed for now
+  \end{itemize}
+\end{frame}
 
 \end{document}
