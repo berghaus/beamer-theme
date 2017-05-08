@@ -109,6 +109,20 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Status of DynaFed at UVic}
+  \begin{itemize}
+    \item Endpoint: \url{https://dynafed.heprc.uvic.ca/fed/}
+    \item Setup:
+    \begin{itemize}
+      \item DynaFed running on SL6 VM
+      \item Compute Canada S3 storage
+    \end{itemize}
+		\item Developing integration with Belle-II/DIRAC
+    \item Will add UVic DynaFed to IAAS Panda Queue using CERN example as graft
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
   \frametitle{Problem: Directories/Collections}
   \begin{block}{WebDAV RFC 8.7.2 PUT for Collections}
     When the PUT operation creates a new non-collection resource all ancestors MUST already exist. If all ancestors do not exist, the method MUST fail with a 409 (Conflict) status code. For example, if resource /a/b/c/d.html is to be created and /a/b/c/ does not exist, then the request must fail.
