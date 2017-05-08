@@ -38,6 +38,17 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Motivation}
+  \begin{itemize}
+    \item Ease of negotiating connections between storage and users/jobs
+    \item Integrate multiple storage backend under the same protocol
+    \item Stability because of multiplication of data sources
+    \item Ease the pain of supporting SRM
+    \item What have I forgotten?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
   \frametitle{ATLAS Projects with DynaFed}
   \begin{itemize}
     \item UVic in Victoria: Rolf Seuster \& Marcus Ebert
@@ -81,7 +92,7 @@
     \end{itemize}
 		\item Authentication:
     \begin{itemize}
-      \item Using X.509 an python plugin with gridmap - to allow in browser identification
+      \item Using X.509 a python plugin with gridmap - allow in browser identification
       \item Federation forwards signed URLs to authenticated users (signatures last 1h)
     \end{itemize}
     \item Adding support for gsiftp - work in progress
@@ -140,7 +151,7 @@
     \item Rucio: Resolve DynaFed and WebDAV standard behaviour:
     \begin{itemize}
       \item Flag HTTP resources that do not implement full WebDAV standard
-      \item Until flag supported in Rucio and AGIS relying on hack in Rucio
+      \item Until flag supported in Rucio and AGIS relying on \alert{hack in Rucio}
     \end{itemize}
     \item DynaFed: Create union of WebDAV standard and object store behaviour in DynaFed: \href{https://its.cern.ch/jira/browse/LCGDM-2373}{LCGDM-2373}
     \item \emph{Note}: Avoid combining writable WebDAV and object stores in a DynaFed for now
