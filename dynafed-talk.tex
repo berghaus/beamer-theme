@@ -70,6 +70,27 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Status of DynaFed at RAL}
+  \begin{itemize}
+    \item Endpoint: \url{https://dynafed.stfc.ac.uk/gridpp/}
+		\item DDM Endpoint: RAL-AZURE\_DATADISK, RAL-AZURE\_SCRATCHDISK
+    \item Setup:
+    \begin{itemize}
+      \item Single VM but easily scalable
+      \item Linked to S3 Gateway at RAL
+    \end{itemize}
+		\item Authentication:
+    \begin{itemize}
+      \item Using X.509 an python plugin with gridmap - to allow in browser identification
+      \item Federation forwards signed URLs to authenticated users (signatures last 1h)
+    \end{itemize}
+    \item Adding support for gsiftp - work in progress
+    \item Introduction by Alastair: \url{https://indico.cern.ch/event/602119/}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
   \frametitle{Problem: Directories/Collections}
   \begin{block}{WebDAV RFC 8.7.2 PUT for Collections}
     When the PUT operation creates a new non-collection resource all ancestors MUST already exist. If all ancestors do not exist, the method MUST fail with a 409 (Conflict) status code. For example, if resource /a/b/c/d.html is to be created and /a/b/c/ does not exist, then the request must fail.
