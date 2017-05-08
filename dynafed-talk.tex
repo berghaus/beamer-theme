@@ -40,10 +40,10 @@
 \begin{frame}
   \frametitle{ATLAS Projects with DynaFed}
   \begin{itemize}
-    \item At UVic: Rolf Seuster \& Marcus Ebert
-    \item At CERN: Frank Berghaus
+    \item UVic in Victoria: Rolf Seuster \& Marcus Ebert
+    \item UVic at CERN: Frank Berghaus
     \item At RAL: Alastair Dewhurst
-    \item In Italy: Alessandro De Salvo
+    \item Italy in Frascati, Napoli and Roma: Alessandro De Salvo
   \end{itemize}
   With lots of help from ADC (Ale and Ivan) and DDM (Mario and Cedric)!
 \end{frame}
@@ -51,6 +51,9 @@
 \begin{frame}
   \frametitle{Status of DynaFed at CERN}
   \begin{itemize}
+    \item Endpoint: \url{https://dynafed-dev.cern.ch/atlas/scratchdisk/}
+    \item Panda Queue: CERN-EXTENSION\_MCORE
+		\item DDM Endpoint: CERN-EXTENSION\_SCRATCHDISK
     \item Setup:
     \begin{itemize}
       \item DynaFed running on CC7 on CERN OpenStack
@@ -59,13 +62,11 @@
 		\item Authentication:
     \begin{itemize}
       \item Using X.509 with VOMS extensions
-      \item Read/Write/List access for ATLAS, added delete access for DDM team
       \item Federation forwards signed URLs to authenticated users (signatures last 1h)
     \end{itemize}
-		\item Panda Queue (CERN-EXTENSION\_MCORE) writing Job Output to federation
-		\item Defined Storage Element in ATLAS DDM (Rucio) : CERN-EXTENSION\_SCRATCHDISK
+    \item Jobs write to DynaFed
+    \item Rucio replication has errors with protocol mismatches
   \end{itemize}
-
 \end{frame}
 
 \begin{frame}
